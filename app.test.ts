@@ -1,6 +1,6 @@
 import app from "./app";
 import { request, use, expect } from "chai";
-import chaiHttp = require("chai-http");
+import chaiHttp from "chai-http";
 import "mocha";
 import { Response } from "superagent";
 
@@ -19,7 +19,9 @@ describe("The app", () => {
       expect(response.text).to.contain(
         "Number of Datasets Published by Federal Ministries"
       );
-      expect(response.text).to.contain('<table class="table table-hover">');
+      expect(response.text).to.contain(
+        '<table class="w-full table-auto border-collapse">'
+      );
     });
   });
 });
